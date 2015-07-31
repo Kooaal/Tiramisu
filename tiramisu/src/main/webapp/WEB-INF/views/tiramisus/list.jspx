@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_get_me_a_tiramisu_entity_Tiramisu" items="${tiramisus}" z="lepjYjhYvoQ8UQuj4kRh609b8/0=">
+        <table:table data="${tiramisus}" id="l_get_me_a_tiramisu_entity_Tiramisu" path="/tiramisus" delete="false" update="false" z="user-managed">
+            <table:column calendar="true" dateTimePattern="${tiramisu_dateajout_date_format}" id="c_get_me_a_tiramisu_entity_Tiramisu_dateajout" property="dateajout" render="false"  z="user-managed"/>
+            <table:column calendar="true" dateTimePattern="${tiramisu_datevalidation_date_format}" id="c_get_me_a_tiramisu_entity_Tiramisu_datevalidation" property="datevalidation" render="false" z="user-managed"/>
+            <table:column calendar="true" dateTimePattern="${tiramisu_datesuppression_date_format}" id="c_get_me_a_tiramisu_entity_Tiramisu_datesuppression" property="datesuppression" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_image" property="image" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_contentType" property="contentType" render="false" z="user-managed"/>
+             <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_name" property="name" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_lieu" property="lieu" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

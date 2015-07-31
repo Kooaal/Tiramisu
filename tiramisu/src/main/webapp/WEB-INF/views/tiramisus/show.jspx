@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"  xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+<!--     permet de donner les droits de modifs qu'aux admins -->
+    <sec:authorize var="isAdmin" access="hasRole('ROLE_ADMIN')"/>
+    <page:show id="ps_get_me_a_tiramisu_entity_Tiramisu" object="${tiramisu}" render="false" path="/tiramisus" delete="${isAdmin}" update="${isAdmin}" z="user-managed">
+        <field:display calendar="true" dateTimePattern="${tiramisu_datesuppression_date_format}" field="datesuppression" id="s_get_me_a_tiramisu_entity_Tiramisu_datesuppression" object="${tiramisu}" render="false" z="user-managed"/>
+        <field:display field="name" id="s_get_me_a_tiramisu_entity_Tiramisu_name" object="${tiramisu}" z="ooZMM7Ff1jVCoxCuJ9HCzfgIMVE="/>
+        <field:display field="prix" id="s_get_me_a_tiramisu_entity_Tiramisu_prix" object="${tiramisu}" z="KqIE1LUmsYc6DJaiJaljeW3VdQw="/>
+        <field:display field="lieu" id="s_get_me_a_tiramisu_entity_Tiramisu_lieu" object="${tiramisu}" z="gacFlfk3AI398F8+MBthVAdHS/k="/>
+        <field:display field="image" id="s_get_me_a_tiramisu_entity_Tiramisu_image" object="${tiramisu}" render="false" z="user-managed"/>
+        <field:display field="description" id="s_get_me_a_tiramisu_entity_Tiramisu_description" object="${tiramisu}" z="yuC8nsKkuBJOLVeVhqHoDvw/wKE="/>
+        <field:display calendar="true" dateTimePattern="${tiramisu_dateajout_date_format}" field="dateajout" id="s_get_me_a_tiramisu_entity_Tiramisu_dateajout" object="${tiramisu}" render="true" z="user-managed"/>
+        <field:display calendar="true" dateTimePattern="${tiramisu_datevalidation_date_format}" field="datevalidation" id="s_get_me_a_tiramisu_entity_Tiramisu_datevalidation" object="${tiramisu}" render="true" z="user-managed"/>
+        <img height="256px" src="${tiramisu.id}/image"  />
+        <field:display field="contentType" id="s_get_me_a_tiramisu_entity_Tiramisu_contentType" object="${tiramisu}" render="false" z="user-managed"/>
+    </page:show>
+    
+<!--     lien pour créer un commentaire associé à ce tiramisu -->
+<!-- div de présentation du Tiramisu -->
+<!-- <div class="container"> -->
+<!-- row pour l'image et le prix à droite -->
+	<div class="row">
+	<img src="${tiramisu.id}/image" class="img-responsive img-circle" alt="Responsive image" style="margin: 0 auto;"/>
+	</div>
+<!-- row pour le titre-->
+	<div class="row">
+	<h1>${tiramisu.name}</h1>
+	<p>${tiramisu.description}</p>
+	<h3 class="text-right">${tiramisu.prix} €</h3>
+	</div>
+		<div class="row">
+		<h1>Lieu</h1>
+	<p >${tiramisu.lieu}</p>
+	</div>
+<!-- </div> -->
+</div>

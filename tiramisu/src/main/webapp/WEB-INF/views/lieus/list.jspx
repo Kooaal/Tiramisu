@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_get_me_a_tiramisu_entity_Lieu" items="${lieus}" z="PqylfjWb/lMIHenX33kF1XxZX2I=">
+        <table:table data="${lieus}" id="l_get_me_a_tiramisu_entity_Lieu" path="/lieus" delete="false" update="false" z="user-managed">
+            <table:column id="c_get_me_a_tiramisu_entity_Lieu_nom" property="nom" z="We4D1LFjaWWJE3ZAptAFsmIFq5A="/>
+            <table:column id="c_get_me_a_tiramisu_entity_Lieu_adresse" property="adresse" z="OLezeIPbx86h//VC9NTrHPe/8IQ="/>
+            <table:column id="c_get_me_a_tiramisu_entity_Lieu_codepostal" property="codepostal" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Lieu_ville" property="ville" z="Is2+DxGjuhalnZDdufEjWwpwXOE="/>
+            <table:column calendar="true" dateTimePattern="${lieu_dateajout_date_format}" id="c_get_me_a_tiramisu_entity_Lieu_dateajout" property="dateajout" render="false" z="user-managed"/>
+            <table:column calendar="true" dateTimePattern="${lieu_datevalidation_date_format}" id="c_get_me_a_tiramisu_entity_Lieu_datevalidation" property="datevalidation" render="false" z="user-managed"/>
+            <table:column calendar="true" dateTimePattern="${lieu_datesuppression_date_format}" id="c_get_me_a_tiramisu_entity_Lieu_datesuppression" property="datesuppression" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+
+</div>

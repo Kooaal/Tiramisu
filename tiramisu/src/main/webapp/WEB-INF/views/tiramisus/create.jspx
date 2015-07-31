@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_get_me_a_tiramisu_entity_Tiramisu" modelAttribute="tiramisu" multipart="true" path="/tiramisus" render="${empty dependencies}" z="user-managed">
+        <field:input field="name" required="true" id="c_get_me_a_tiramisu_entity_Tiramisu_name" z="+Rwhe7OfET9zkeWby4G0iARqEXg="/>
+        <field:datetime dateTimePattern="${tiramisu_dateajout_date_format}" field="dateajout" id="c_get_me_a_tiramisu_entity_Tiramisu_dateajout" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${tiramisu_datevalidation_date_format}" field="datevalidation" id="c_get_me_a_tiramisu_entity_Tiramisu_datevalidation" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${tiramisu_datesuppression_date_format}" field="datesuppression" id="c_get_me_a_tiramisu_entity_Tiramisu_datesuppression" render="false" z="user-managed"/>
+        <field:input field="prix" id="c_get_me_a_tiramisu_entity_Tiramisu_prix" required="true"  z="rLEP1zheXpxeXY3uxPgU/HAEYa8="/>
+        <field:select field="lieu" id="c_get_me_a_tiramisu_entity_Tiramisu_lieu" itemValue="id" items="${lieus}" path="/lieus" z="8+vTmWgpj/hBghgz4rvLmZuZABM="/>
+        <field:textarea field="image" id="c_get_me_a_tiramisu_entity_Tiramisu_image" render="false" z="user-managed"/>
+        <field:textarea field="description" id="c_get_me_a_tiramisu_entity_Tiramisu_description" z="user-managed"/>
+        <field:input field="image" id="c_get_me_a_tiramisu_entity_Tiramisu_image" type="file" z="user-managed"/>
+        <field:input field="contentType" id="c_get_me_a_tiramisu_entity_Tiramisu_contentType" render="false" z="user-managed"/>
+        <field:simple field="commentaires" id="c_get_me_a_tiramisu_entity_Tiramisu_commentaires" messageCode="entity_reference_not_managed" messageCodeAttribute="Commentaire" render="false" z="user-managed"/>
+        <!--         TODO: NDA permettre la création en direct du commentaire -->
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_get_me_a_tiramisu_entity_Tiramisu" render="${not empty dependencies}" z="BSfXPWTmtlD/uhSPy4WAxy17QIM="/>
+</div>

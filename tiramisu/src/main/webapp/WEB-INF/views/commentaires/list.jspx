@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_get_me_a_tiramisu_entity_Commentaire" items="${commentaires}" z="JKEj/rVDBeY4X0td+rCbK9ktG4g=">
+        <table:table data="${commentaires}" id="l_get_me_a_tiramisu_entity_Commentaire" path="/commentaires" z="O8Oc5SzufH1hHBlODLAIwyV4iG0=">
+            <table:column id="c_get_me_a_tiramisu_entity_Commentaire_titre" property="titre" z="qCn5PAM1Fj2NZ8Tuzb+pSM/b8xI="/>
+            <table:column id="c_get_me_a_tiramisu_entity_Commentaire_commentaire" property="commentaire" z="eB2cnVoy29PoA9hbjrdi44J2J4A="/>
+            <table:column id="c_get_me_a_tiramisu_entity_Commentaire_note" property="note" z="FD6cMuEZFKvuo3qX7pxrtq6zQJE="/>
+            <table:column calendar="true" dateTimePattern="${commentaire_dateajout_date_format}" id="c_get_me_a_tiramisu_entity_Commentaire_dateajout" property="dateajout" z="P/Pv0DF02ASEX4i38mecfXd+xv0="/>
+            <table:column calendar="true" dateTimePattern="${commentaire_datevalidation_date_format}" id="c_get_me_a_tiramisu_entity_Commentaire_datevalidation" property="datevalidation" z="JtUD++CmrUgU+KuamjGbl6IPZCM="/>
+            <table:column calendar="true" dateTimePattern="${commentaire_datesuppression_date_format}" id="c_get_me_a_tiramisu_entity_Commentaire_datesuppression" property="datesuppression" z="Dx44+kltdDBEnveOeIfi8n/ByCU="/>
+        </table:table>
+    </page:list>
+</div>

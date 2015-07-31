@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_get_me_a_tiramisu_dto_RechercheTiramisuDTO" object="${recherchetiramisudto}" path="/recherchetiramisudto" z="AZge/r6uYGjZ8VLBcwc6VrwcLZw=">
+        <field:display field="keywords" id="s_get_me_a_tiramisu_dto_RechercheTiramisuDTO_keywords" object="${recherchetiramisudto}" z="maAv660h75g/Zf9nOqYM5LjeAH0="/>
+        <field:display field="adresse" id="s_get_me_a_tiramisu_dto_RechercheTiramisuDTO_adresse" object="${recherchetiramisudto}" z="Y1zKR/xqLvOJQcEyc15lpyNEkeY="/>
+        <field:display field="ville" id="s_get_me_a_tiramisu_dto_RechercheTiramisuDTO_ville" object="${recherchetiramisudto}" z="y2IrVi5mOggY+GbLMA8xzkvUedo="/>
+        <field:display field="codepostal" id="s_get_me_a_tiramisu_dto_RechercheTiramisuDTO_codepostal" object="${recherchetiramisudto}" z="mTxtrVDsyNlJNGiMJCUdmghU8GU="/>
+        <field:display field="prix" id="s_get_me_a_tiramisu_dto_RechercheTiramisuDTO_prix" object="${recherchetiramisudto}" z="ey4Uqgpb1hDDSkeGf4CE5+5pIMY="/>
+    </page:show>
+</div>

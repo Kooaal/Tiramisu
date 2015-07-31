@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0"  xmlns:sec="http://www.springframework.org/security/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" >
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+     <sec:authorize var="isAdmin" access="hasRole('ROLE_ADMIN')"/>
+    <page:show id="ps_get_me_a_tiramisu_entity_Lieu" object="${lieu}" path="/lieus" create="${isAdmin}" update="${isAdmin}" list="false" delete="${isAdmin}"  z="9poKOestIU22Ajr5KSf4hnLXRi4=">
+        <field:display field="nom" id="s_get_me_a_tiramisu_entity_Lieu_nom" object="${lieu}" z="fkdR1ovZo83Pbjo2G9lT5maWxoI="/>
+        <field:display field="adresse" id="s_get_me_a_tiramisu_entity_Lieu_adresse" object="${lieu}" z="Tv07e62PLxFHuIKpM1fE58s1cIg="/>
+        <field:display field="ville" id="s_get_me_a_tiramisu_entity_Lieu_ville" object="${lieu}" z="7SWdgpW8oJqjJdfVEbi2UIjd934="/>
+        <field:display field="codepostal" id="s_get_me_a_tiramisu_entity_Lieu_codepostal" object="${lieu}" z="iVA9QblMnhH6xI0JbHsyKmyCefg="/>
+        <field:display field="tiramisus" id="s_get_me_a_tiramisu_entity_Lieu_tiramisus" object="${lieu}" render="false" z="user-managed"/>
+        <field:display calendar="true" dateTimePattern="${lieu_dateajout_date_format}" field="dateajout" id="s_get_me_a_tiramisu_entity_Lieu_dateajout" object="${lieu}" z="OEPoPnMwsX0U1rPHkfY+k7ScIBo="/>
+        <field:display calendar="true" dateTimePattern="${lieu_datevalidation_date_format}" field="datevalidation" id="s_get_me_a_tiramisu_entity_Lieu_datevalidation" object="${lieu}" render="false" z="user-managed"/>
+        <field:display calendar="true" dateTimePattern="${lieu_datesuppression_date_format}" field="datesuppression" id="s_get_me_a_tiramisu_entity_Lieu_datesuppression" object="${lieu}" render="false" z="user-managed"/>
+    </page:show>
+
+	<br/>
+		<br/>
+
+	<!-- 	TODO:variabiliser nombre de colonne (constante +get var) -->
+	<H1>Liste des tiramisus :</H1>
+	<c:forEach items="${lieu.tiramisus}" step="3" varStatus="i">
+		<div class="row">
+			<c:forEach begin="0" end="2" varStatus="j">
+				<c:set var="index" value="${i.index  + j.index}" />
+				<c:choose>
+					<c:when test="${index lt fn:length(lieu.tiramisus)}">
+					<c:set var="item" value="${lieu.tiramisus[index]}" />
+						<div class="col-sm-4 col-lg-4 col-md-4">
+							<div class="thumbnail">
+								<a href="${path}/tiramisu/tiramisus/${item.id}"
+									style="text-decoration: none; color: inherit"> <img
+									src="/tiramisu/resources/images/logo_tiramisu.png" alt=""></img>
+									<div class="caption">
+										<!-- 									si le prix est non nulle et sup à 0 on l'affiche -->
+										<c:if test="${item.prix>0}">
+											<h4 class="pull-right">${item.prix}€</h4>
+										</c:if>
+										<p>
+											
+											${item.name}<br /> ${item.lieu}<br /> ${item.lieu.codepostal}
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</c:when>
+				</c:choose>
+			</c:forEach>
+		</div>
+	</c:forEach>
+</div>

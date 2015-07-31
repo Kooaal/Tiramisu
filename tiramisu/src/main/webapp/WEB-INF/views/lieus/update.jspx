@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_get_me_a_tiramisu_entity_Lieu" modelAttribute="lieu" path="/lieus" versionField="Version" z="LTh3quTGHgXkrLt8rY1fSh70nEA=">
+        <field:input field="adresse" id="c_get_me_a_tiramisu_entity_Lieu_adresse" z="wdm/gcWvnhn7DrI5doWfSAd6aoE="/>
+        <field:input field="ville" id="c_get_me_a_tiramisu_entity_Lieu_ville" z="pWqnMbZTiaKkb5QGcMKpqOTHr08="/>
+        <field:input field="nom" id="c_get_me_a_tiramisu_entity_Lieu_nom" z="Oc6Aj+CF9Rnj96BPzfzvvQ/5JOY="/>
+        <field:simple field="tiramisus" id="c_get_me_a_tiramisu_entity_Lieu_tiramisus" messageCode="entity_reference_not_managed" messageCodeAttribute="Tiramisu" z="jBh2cWJM9AVuRHKjDe7WzbLuIYM="/>
+        <field:input field="codepostal" id="c_get_me_a_tiramisu_entity_Lieu_codepostal" max="5" validationRegex="^[0-9]*$" z="qXDLGojoc/wIKA34j8ZTQ5v9Cjo="/>
+        <field:datetime dateTimePattern="${lieu_dateajout_date_format}" field="dateajout" id="c_get_me_a_tiramisu_entity_Lieu_dateajout" z="BABceLPZHY2sQ1GRp+itblJzfm0="/>
+        <field:datetime dateTimePattern="${lieu_datevalidation_date_format}" field="datevalidation" id="c_get_me_a_tiramisu_entity_Lieu_datevalidation" z="32oUIH4Bgt0/4k3Z6DszUnzscFM="/>
+        <field:datetime dateTimePattern="${lieu_datesuppression_date_format}" field="datesuppression" id="c_get_me_a_tiramisu_entity_Lieu_datesuppression" z="DDbzoHMeno7FUyn1ULiTEnkH5JE="/>
+    </form:update>
+</div>

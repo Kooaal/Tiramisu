@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<h1>Liste des tiramisus</h1>
+	<h2>Critères :</h2>
+
+	<!-- 	definition des URLs pour les ordres de tri -->
+	<!-- TODO: recuperer la taille spécifié par le User ou bien la taille par défaut -->
+	<spring:url value="" var="order_prix_haut">
+		<spring:param name="sortFieldName" value="prix" />
+		<spring:param name="sortOrder" value="ASC" />
+		<spring:param name="size" value="${param.size}" />
+	</spring:url>
+
+	<spring:url value="" var="order_prix_bas">
+		<spring:param name="sortFieldName" value="prix" />
+		<spring:param name="sortOrder" value="DESC" />
+		<spring:param name="size" value="${param.size}" />
+	</spring:url>
+
+	<div class="row">
+		<!-- 	URL pour les ordres de tri -->
+		<a href="${order_prix_haut}"> prix haut </a> <a
+			href="${order_prix_bas}"> prix bas </a>
+
+		<!-- 		formulaire pour le tri par arrondissement -->
+		<FORM action="">
+			<input type="hidden" name="size" value="${param.size}" />
+			<div class="form-group">
+				<!-- 			TODO 1: variabiliser pour l'internationalisation -->
+				<label for="select_arr"> Arrondissement:</label> <select
+					name="arrondissement" class="input-small"
+					onchange="this.form.submit()" id="select_arr">
+					<c:forEach items="${arrondissements}" var="arrondissement">
+						<!-- 				permet de garder la précédente sélection -->
+						<c:choose>
+							<c:when test="${arrondissement.codepostal == selectedcodepostal}">
+								<option value="${arrondissement.codepostal}" selected="selected">${arrondissement.nom}</option>
+							</c:when>
+							<c:otherwise>
+								<option value="${arrondissement.codepostal}">${arrondissement.nom}</option>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+				</select>
+			</div>
+		</FORM>
+	</div>
+	<!-- 	TODO:variabiliser nombre de colonne (constante +get var) -->
+	<c:forEach items="${tiramisus}" step="3" varStatus="i">
+		<div class="row">
+			<c:forEach begin="0" end="2" varStatus="j">
+				<c:set var="index" value="${i.index  + j.index}" />
+				<c:choose>
+					<c:when test="${index lt fn:length(tiramisus)}">
+					<c:set var="item" value="${tiramisus[index]}" />
+						<div class="col-sm-4 col-lg-4 col-md-4">
+							<div class="thumbnail">
+								<a href="${path}/tiramisu/tiramisus/${item.id}"
+									style="text-decoration: none; color: inherit"> <img
+									src="/tiramisu/resources/images/logo_tiramisu.png" alt=""></img>
+									<div class="caption">
+										<!-- 									si le prix est non nulle et sup à 0 on l'affiche -->
+										<c:if test="${item.prix>0}">
+											<h4 class="pull-right">${item.prix}€</h4>
+										</c:if>
+										<p>
+											
+											${item.name}<br /> ${item.lieu}<br /> ${item.lieu.codepostal}
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</c:when>
+				</c:choose>
+			</c:forEach>
+		</div>
+	</c:forEach>
+	<tr class="footer">
+		<td colspan="${colCounter}">
+			<c:if test="${not empty maxPages}">
+				<util:pagination maxPages="${maxPages}" page="${param.page}" sortFieldName="${param.sortFieldName}" 
+				sortOrder="${param.sortOrder}"
+				arrondissement="${param.arrondissement}"
+					size="${param.size}" />
+			</c:if></td>
+	</tr>
+</div>

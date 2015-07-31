@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_get_me_a_tiramisu_entity_Commentaire" object="${commentaire}" path="/commentaires" z="RvnSClNb0l4BfbxrGf8zLlnE8pU=">
+        <field:display field="titre" id="s_get_me_a_tiramisu_entity_Commentaire_titre" object="${commentaire}" z="9nyEfnFxDqisjp7Bb88jE/LnoVY="/>
+        <field:display field="commentaire" id="s_get_me_a_tiramisu_entity_Commentaire_commentaire" object="${commentaire}" z="R2o+79JtUyk0YL0f8xH+Eryg6nw="/>
+        <field:display field="note" id="s_get_me_a_tiramisu_entity_Commentaire_note" object="${commentaire}" z="yBsAUlm5wRn6to3bhITX4hNUsvU="/>
+        <field:display field="tiramisu" id="s_get_me_a_tiramisu_entity_Commentaire_tiramisu" object="${commentaire}" z="21y3s1TWqM1l/0bA2KGAMR5o8mI="/>
+        <field:display calendar="true" dateTimePattern="${commentaire_dateajout_date_format}" field="dateajout" id="s_get_me_a_tiramisu_entity_Commentaire_dateajout" object="${commentaire}" z="FAWjDgKtfeXn9tchB6+0D66oiNk="/>
+        <field:display calendar="true" dateTimePattern="${commentaire_datevalidation_date_format}" field="datevalidation" id="s_get_me_a_tiramisu_entity_Commentaire_datevalidation" object="${commentaire}" z="BLQB3mW/1qkbZQrZsgMFNyGe6DM="/>
+        <field:display calendar="true" dateTimePattern="${commentaire_datesuppression_date_format}" field="datesuppression" id="s_get_me_a_tiramisu_entity_Commentaire_datesuppression" object="${commentaire}" z="SGe/GpTyPCTfdFxdXiVMQjeQkQQ="/>
+    </page:show>
+</div>

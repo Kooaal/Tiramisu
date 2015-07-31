@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_get_me_a_tiramisu_entity_Commentaire" modelAttribute="commentaire" path="/commentaires" versionField="Version" z="PogC5HV+rK/EuV4l2nQF60ETuNs=">
+        <field:input field="titre" id="c_get_me_a_tiramisu_entity_Commentaire_titre" required="true" z="DwdAtqjViMxho3zb26sTc78wfGw="/>
+        <field:input field="commentaire" id="c_get_me_a_tiramisu_entity_Commentaire_commentaire" z="WYOpqgH11Xb6TMbt9hG/huv2Yps="/>
+        <field:input decimalMax="5" decimalMin="0" field="note" id="c_get_me_a_tiramisu_entity_Commentaire_note" required="true" z="DWxXCCnDO6pw3JA0sp9FhUrkWCQ="/>
+        <field:select field="tiramisu" id="c_get_me_a_tiramisu_entity_Commentaire_tiramisu" itemValue="id" items="${tiramisus}" path="/tiramisus" z="u+RylfWn7Jud7HXmBX21KdTdgY0="/>
+        <field:datetime dateTimePattern="${commentaire_dateajout_date_format}" field="dateajout" id="c_get_me_a_tiramisu_entity_Commentaire_dateajout" z="Vb2IbBtNEb8M3Scx1uKxavgmH70="/>
+        <field:datetime dateTimePattern="${commentaire_datevalidation_date_format}" field="datevalidation" id="c_get_me_a_tiramisu_entity_Commentaire_datevalidation" z="ppfhn4Sk0T4QYZk7AYieHkW464U="/>
+        <field:datetime dateTimePattern="${commentaire_datesuppression_date_format}" field="datesuppression" id="c_get_me_a_tiramisu_entity_Commentaire_datesuppression" z="iEZBmrcIgtBCH9E3B42bP/fdgnQ="/>
+    </form:update>
+</div>

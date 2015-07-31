@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_get_me_a_tiramisu_dto_RechercheTiramisuDTO" items="${tiramisus}" z="user-managed">
+        <table:table create="false" data="${tiramisus}" delete="false" id="l_get_me_a_tiramisu_entity_Tiramisu" path="/recherchetiramisudto" update="false" z="user-managed">
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_image" property="image" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_contentType" property="contentType" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_name" property="name" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_entity_Tiramisu_lieu" property="lieu" z="user-managed"/>
+        </table:table>
+        <table:table data="${recherchetiramisudtoitems}" id="l_get_me_a_tiramisu_dto_RechercheTiramisuDTO" render="false" path="/recherchetiramisudto" z="user-managed">
+            <table:column id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_keywords" property="keywords" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_adresse" property="adresse"  render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_ville" property="ville" render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_codepostal" property="codepostal"  render="false" z="user-managed"/>
+            <table:column id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_prix" property="prix" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

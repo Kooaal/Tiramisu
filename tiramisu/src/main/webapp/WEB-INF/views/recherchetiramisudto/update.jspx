@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_get_me_a_tiramisu_dto_RechercheTiramisuDTO" modelAttribute="rechercheTiramisuDTO" path="/recherchetiramisudto" versionField="Version" z="ZwKfsIdsuCTdq6IaIQo/jOB+yTA=">
+        <field:input field="keywords" id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_keywords" z="bT6NqbfwMarxjOlzNVUJQX23SGA="/>
+        <field:input field="adresse" id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_adresse" z="2ws61We/bDFAbp/OcQIrmUQTl8M="/>
+        <field:input field="ville" id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_ville" z="nsx6sFRIv1Im7QW2dh+rRJJTjQE="/>
+        <field:input field="codepostal" id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_codepostal" max="5" validationRegex="^[0-9]*$" z="Q1wmZOjN2Jb5hRwsygnHeskjGGk="/>
+        <field:input field="prix" id="c_get_me_a_tiramisu_dto_RechercheTiramisuDTO_prix" required="true" z="Sp4jilJRxZW5CJwsVVs5MFqymIA="/>
+    </form:update>
+</div>

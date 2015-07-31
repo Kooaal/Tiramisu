@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_get_me_a_tiramisu_entity_Tiramisu" modelAttribute="tiramisu" path="/tiramisus" versionField="Version" z="5lxqIPL6s/zpes7Iic37EiOIRKk=">
+        <field:datetime dateTimePattern="${tiramisu_dateajout_date_format}" field="dateajout" id="c_get_me_a_tiramisu_entity_Tiramisu_dateajout" z="Yrar9zMWoHEHrbHqy4TYyD4Y9JY="/>
+        <field:datetime dateTimePattern="${tiramisu_datevalidation_date_format}" field="datevalidation" id="c_get_me_a_tiramisu_entity_Tiramisu_datevalidation" z="q7zDlJ8A6xQqTRLAFFo6VM+7ASc="/>
+        <field:datetime dateTimePattern="${tiramisu_datesuppression_date_format}" field="datesuppression" id="c_get_me_a_tiramisu_entity_Tiramisu_datesuppression" z="GS/BfRg9kEOIRXVU5HUDj/pPbhw="/>
+        <field:input field="name" id="c_get_me_a_tiramisu_entity_Tiramisu_name" z="+Rwhe7OfET9zkeWby4G0iARqEXg="/>
+        <field:input field="prix" id="c_get_me_a_tiramisu_entity_Tiramisu_prix" required="true" z="rLEP1zheXpxeXY3uxPgU/HAEYa8="/>
+        <field:select field="lieu" id="c_get_me_a_tiramisu_entity_Tiramisu_lieu" itemValue="id" items="${lieus}" path="/lieus" z="8+vTmWgpj/hBghgz4rvLmZuZABM="/>
+        <field:textarea field="image" id="c_get_me_a_tiramisu_entity_Tiramisu_image" z="y1wRNNeizOVTT1XNpVA37Zc8B1Q="/>
+        <field:input field="description" id="c_get_me_a_tiramisu_entity_Tiramisu_description" z="rmSZ6mrWWblq6NcvYv4yB1z0Jc0="/>
+        <field:input field="contentType" id="c_get_me_a_tiramisu_entity_Tiramisu_contentType" z="I032blo6gfQpet3TmAP4+/8G9DQ="/>
+        <field:simple field="commentaires" id="c_get_me_a_tiramisu_entity_Tiramisu_commentaires" messageCode="entity_reference_not_managed" messageCodeAttribute="Commentaire" z="HUHz2HnrKT+VZ2yupNf3Q33GsaQ="/>
+    </form:update>
+</div>

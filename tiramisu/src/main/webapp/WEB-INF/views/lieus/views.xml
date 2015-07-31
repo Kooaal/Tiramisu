@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="lieus/list">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/list_grid.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/show">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/show.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/create">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/create.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/update">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/update.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/findLieusByAdresseLike">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/findLieusByAdresseLike.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/findLieusByVilleLikeOrCodepostalLike">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/findLieusByVilleLikeOrCodepostalLike.jspx"/>
+    </definition>
+<definition extends="default" name="lieus/findLieusByCodepostalLike">
+        <put-attribute name="body" value="/WEB-INF/views/lieus/findLieusByCodepostalLike.jspx"/>
+    </definition>
+</tiles-definitions>

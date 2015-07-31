@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <Lieu nom="lily et marcel" ville="paris" codepostal="75013" id="1"/>
+    <Lieu nom="Indiana" ville="paris" codepostal="75014" id="2"/>
+    <Tiramisu prix="10" name="erer" id="1" lieu_id="1" dateajout="2014-02-25" datevalidation="2014-02-25"/>
+    <Tiramisu prix="10" name="tiramisu 2" id="2" lieu_id="1" dateajout="2014-02-25" datevalidation="2014-02-25"/>
+     <Tiramisu prix="10" name="tiramisu 2" id="4" lieu_id="2" dateajout="2014-02-25" datevalidation="2014-02-25"/>
+    <Tiramisu prix="10" name="tiramisu 2" id="3" lieu_id="1" dateajout="2014-02-25" datevalidation="2014-02-25" datesuppression="2014-02-25"/>
+</dataset>
